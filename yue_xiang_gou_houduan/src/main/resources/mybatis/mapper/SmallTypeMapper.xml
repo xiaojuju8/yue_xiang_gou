@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yue_xiang_gou.mapper.SmallTypeMapper">
+
+    <resultMap id="smallTypeResult" type="com.yue_xiang_gou.entity.SmallType">
+        <association property="bigType" column="bigTypeId" select="com.yue_xiang_gou.mapper.BigTypeMapper.findById"></association>
+    </resultMap>
+
+    <select id="findById" parameterType="Integer" resultMap="smallTypeResult">
+        select * from t_smallType where id=#{id}
+    </select>
+
+    <select id="list" parameterType="Map" resultMap="smallTypeResult">
+        select * from t_smallType
+        <where>
+            <if test="name!=null and name!='' ">
+                and name like concat('%',#{name},'%')
+            </if>
+        </where>
+        <if test="start!=null and pageSize!=null ">
+            limit #{start},#{pageSize}
+        </if>
+    </select>
+
+    <select id="getTotal" parameterType="Map" resultType="Long">
+        select count(*) from t_smallType
+        <where>
+            <if test="name!=null and name!='' ">
+                and name like concat('%',#{name},'%')
+            </if>
+        </where>
+    </select>
+
+</mapper>

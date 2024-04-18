@@ -1,0 +1,36 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+spring:
+  mvc:
+    servlet:
+      load-on-startup: 1
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/db_yue_xiang_gou_houduan?serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+mybatis-plus:
+  global-config:
+    db-config:
+      id-type: auto #id生成规则：数据库id自增
+  configuration:
+    map-underscore-to-camel-case: false # 开启驼峰功能
+    auto-mapping-behavior: full # 自动映射任何复杂的结果
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath:mybatis/mapper/*.xml
+
+weixin:
+  jscode2sessionUrl: https://api.weixin.qq.com/sns/jscode2session
+  appid: wx953b644fd65ed131
+  secret: 0bb0a59ff6f5d8bfde73d6384892aeeb
+
+bigTypeImagesFilePath: D://微信小程序电商/开发素材/bigTypeImgs/
+
+productImagesFilePath: D://微信小程序电商/开发素材/productImgs/
+
+swiperImagesFilePath: D://微信小程序电商/开发素材/swiperImgs/
+
+productSwiperImagesFilePath: D://微信小程序电商/开发素材/productSwiperImgs/
