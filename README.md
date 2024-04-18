@@ -5,7 +5,7 @@
 
 # 项目架构
 
-![](C:\Users\86152\Downloads\yxg架构.jpg)
+![](https://github.com/xiaojuju8/yue_xiang_gou/raw/main/ReadmeProduct/yxg%E6%9E%B6%E6%9E%84.jpg)
 
 # 技术实现
 
