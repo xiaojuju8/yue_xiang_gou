@@ -1,0 +1,38 @@
+page {
+  background-color: #F9F9F9;
+  padding-top: 20rpx;
+}
+.search_row {
+  height: 50rpx;
+  display: flex;
+}
+.search_row input {
+  background-color: #FFFFFF;
+  flex: 1;
+  height: 100%;
+  padding-left: 30rpx;
+}
+.search_row button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100rpx !important;
+  font-size: 26rpx;
+  padding: 0;
+  margin: 0 10rpx;
+  height: 100%;
+}
+.search_content {
+  margin: 15rpx;
+  padding: 0rpx;
+}
+.search_content .search_item {
+  background-color: #FFFFFF;
+  font-size: 26rpx;
+  padding: 15rpx;
+  align-items: center;
+  border-bottom: 1rpx solid #EAEAEA;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

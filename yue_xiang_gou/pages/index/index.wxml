@@ -1,0 +1,68 @@
+<view>
+  <!-- 搜索框开始 -->
+  <SearchBar></SearchBar>
+  <!-- 搜索框结束 -->
+
+  <!-- 轮播图开始 -->
+  <view class="index_swiper">
+    <swiper autoplay circular indicator-dots>
+      <swiper-item
+        wx:for="{{swiperList}}"
+        wx:for-item="swiper"
+        wx:key="id"
+      >
+        <navigator url="/pages/product_detail/index?id={{swiper.id}}">
+        <image src="{{baseUrl+'/image/swiper/'+swiper.swiperPic}}" mode="widthFix"></image>
+        </navigator>
+      </swiper-item>
+    </swiper>
+  </view>
+  <!-- 轮播图结束 -->
+
+  <!-- 商品大类图片显示 开始 -->
+  <view class="index_bigType">
+    <view class="bigTypeRow">
+      <navigator
+        bindtap="handleTypeJump"
+        data-index="{{index}}"
+        wx:for="{{bigTypeList_row1}}"
+        wx:for-item="bigType"
+        wx:key="id"
+      >
+        <image src="{{baseUrl+'/image/bigType/'+bigType.image}}" mode="widthFix"></image>
+      </navigator>
+    </view>
+    <view class="bigTypeRow">
+      <navigator
+        bindtap="handleTypeJump"
+        data-index="{{index+5}}"
+        wx:for="{{bigTypeList_row2}}"
+        wx:for-item="bigType"
+        wx:key="id"
+      >
+        <image src="{{baseUrl+'/image/bigType/'+bigType.image}}" mode="widthFix"></image>
+      </navigator>
+    </view>
+  </view>
+  <!-- 商品大类图片显示 结束 -->
+
+  <!-- 商品热卖推荐 开始 -->
+  <view class="index_hotProduct">
+    <view class="product_title">热卖商品推荐</view>
+    <view class="product_list">
+      <view class="product_detail"
+        wx:for="{{hotProductList}}"
+        wx:for-item="hotProduct"
+        wx:key="id"
+      >
+        <navigator url="/pages/product_detail/index?id={{hotProduct.id}}">
+          <image src="{{baseUrl+'/image/product/'+hotProduct.proPic}}" mode="widthFix"></image>
+          <view class="product_name">{{hotProduct.name}}</view>
+          <view class="product_price">￥{{hotProduct.price}}</view>
+          <button size="mini" type="warn">点击购买</button>
+        </navigator>
+      </view>
+    </view>
+  </view>
+  <!-- 商品热卖推荐 结束 -->
+</view>

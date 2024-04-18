@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "SearchBar":"/components/SearchBar/SearchBar"
+  },
+  "navigationBarTitleText": "悦享购-首页"
+}

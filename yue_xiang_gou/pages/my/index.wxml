@@ -1,0 +1,60 @@
+<view class="user_info">
+  <!-- 用户背景信息 开始 -->
+  <view class="user_info_bg">
+    <view class="user_info_wrap">
+      <image src="{{userInfo.avatarUrl}}"></image>
+      <view class="user_name">{{userInfo.nickName}}</view>
+    </view>
+  </view>
+  <!-- 用户背景信息 结束 -->
+
+  <!-- 用户操作菜单 开始 -->
+  <view class="user_menu">
+
+    <!-- 订单管理 开始 -->
+    <view class="order_wrap">
+      <view class="order_title">我的订单</view>
+      <view class="order_content">
+        <navigator url="/pages/order/index?type=1">
+          <view class="iconfont icon-31daifukuan"></view>
+          <view class="order_name">待付款</view>
+        </navigator>
+        <navigator url="/pages/order/index?type=2">
+          <view class="iconfont icon-daishouhuo"></view>
+          <view class="order_name">待收货</view>
+        </navigator>
+        <navigator url="/pages/order/index?type=3">
+          <view class="iconfont icon-tuikuan"></view>
+          <view class="order_name">退款/退货</view>
+        </navigator>
+        <navigator url="/pages/order/index?type=0">
+          <view class="iconfont icon-quanbudingdan"></view>
+          <view class="order_name">全部订单</view>
+        </navigator>
+      </view>
+    </view>
+    <!-- 订单管理 结束 -->
+
+    <!-- 收获地址管理 开始 -->
+    <view class="address_wrap"     bindtap="handleEditAddress">
+      收货地址管理
+    </view>
+    <!-- 收获地址管理 结束 -->
+
+    <!-- 应用相关信息 开始 -->
+    <view class="app_info_wrap">
+      <view class="app_info_item app_info_contact">
+        <text>联系客服</text>
+        <text>10086</text>
+      </view>
+      <view class="app_info_item">
+        <button open-type="feedback" class="feedback">意见反馈</button>
+      </view>
+      <view class="app_info_item">
+        关于我们
+      </view>
+    </view>
+    <!-- 应用相关信息 结束 -->
+  </view>
+  <!-- 用户操作菜单 结束 -->
+</view>

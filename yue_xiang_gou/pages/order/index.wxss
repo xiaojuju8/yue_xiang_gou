@@ -1,0 +1,38 @@
+.tabs .tabs_title {
+  display: flex;
+}
+.tabs .tabs_title .title_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  padding: 15rpx 0;
+}
+.tabs .tabs_title .active {
+  color: var(--themeColor);
+  border-bottom: 5rpx solid currentColor;
+}
+.tabs .tabs_content .order_main .order_item {
+  padding: 20rpx;
+  border-bottom: 1rpx solid #ccc;
+  color: #666;
+}
+.tabs .tabs_content .order_main .order_item .order_no_row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10rpx 0;
+}
+.tabs .tabs_content .order_main .order_item .order_price_row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10rpx 0;
+}
+.tabs .tabs_content .order_main .order_item .order_price_row .order_price_value {
+  color: var(--themeColor);
+  font-size: 32rpx;
+}
+.tabs .tabs_content .order_main .order_item .order_time_row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10rpx 0;
+}

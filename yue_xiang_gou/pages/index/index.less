@@ -1,0 +1,64 @@
+// 轮播图样式
+.index_swiper{
+  swiper{
+    width: 750rpx;
+    height: 375rpx;
+    swiper-item{
+      image{
+        width: 100%;
+      }
+    }
+  }
+}
+
+// 商品大类样式
+.index_bigType{
+  padding: 20rpx;
+  background-color: #F7F7F7;
+  .bigTypeRow{
+    display: flex;
+    navigator{
+      flex: 1;
+      image{
+        width:150rpx;
+      }
+    }
+  }
+}
+
+//商品热卖推荐样式
+.index_hotProduct{
+  .product_title{
+    font-size: 32rpx;
+    font-weight: 600;
+    padding: 20rpx;
+    color: var(--themeColor);
+    background-color: #E0E0E0;
+  }
+  .product_list{
+    display: flex;
+    flex-wrap: wrap;
+    .product_detail{
+      margin: 15rpx;
+      width: 46%;
+      text-align: center;
+      navigator{
+        image{
+          width: 100%;
+          background-color: #F5F5F5;
+        }
+        .product_name{
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        .product_price{
+          color: var(--themeColor);
+        }
+        button{
+
+        }
+      }
+    }
+  }
+}

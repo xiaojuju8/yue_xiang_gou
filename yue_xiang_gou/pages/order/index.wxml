@@ -1,0 +1,34 @@
+<view class="tabs">
+  <view class="tabs_title">
+    <view
+      bindtap="handleItemTap"
+      data-index="{{index}}"
+      wx:for="{{tabs}}"
+      wx:key="id"
+      class="title_item {{item.isActive?'active':''}}">
+      {{item.value}}
+    </view>
+  </view>
+
+  <view class="tabs_content">
+    <view class="order_main">
+      <view 
+        wx:for="{{orders}}"
+        wx:key="id"
+      class="order_item">
+        <view class="order_no_row">
+          <view class="order_no_text">订单编号</view>
+          <view class="order_no_value">{{item.orderNo}}</view>
+        </view>
+        <view class="order_price_row">
+          <view class="order_price_text">订单价格</view>
+          <view class="order_price_value">￥{{item.totalPrice}}</view>
+        </view>
+        <view class="order_time_row">
+          <view class="order_time_text">订单日期</view>
+          <view class="order_time_value">{{item.createDate}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
